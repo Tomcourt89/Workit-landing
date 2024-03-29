@@ -1,0 +1,155 @@
+:root {
+    --white: #FFF;
+    --ghost-white: #FCF8FF;
+    --eucalyptus: #44FFA1;
+    --davy-grey: #584D62;
+    --dark-purple: #24053E;
+
+    --text-3xl: 3.125rem;
+    --text-2xl: 2rem;
+    --text-xl: 1.75rem;
+    --text-lg: 1.25rem;
+    --text-base: 1rem;
+
+    --line-3xl: 55px;
+    --line-2xl: 46px;
+    --line-xl: 36px;
+    --line-lg: 32px;
+    --line-base: 28px;
+
+    --letter-tight: -0.16px;
+
+    --font-header: "Fraunces";
+    --font-body: "Manrope";
+
+    --side-spacing: 16px;
+    --block-spacing: 32px 62px;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url(../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(../assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-purple);
+    background: var(--white);
+}
+
+img {
+    width: 100%;
+}
+
+header,
+.hero {
+    background-color: var(--dark-purple);
+    color: var(--white)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px var(--side-spacing);
+}
+
+header img {
+    max-width: 95px;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    padding-block: 5px;
+    border-bottom: 3px solid var(--eucalyptus);
+    letter-spacing: var(--letter-tight);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: var(--font-header);
+    font-size: var(--text-3xl);
+    padding: 32px var(--side-spacing);
+    margin: 0 var(--side-spacing);
+    line-height: var(--line-3xl);
+    text-align: center;
+}
+
+.hero h1 span {
+    border-bottom: 3px solid var(--eucalyptus);
+}
+
+.hero a {
+    color: var(--dark-purple);
+    background: var(--eucalyptus);
+    text-decoration: none;
+    padding: 12px 24px;
+    letter-spacing: var(--letter-tight);
+    line-height: var(--line-lg);
+    font-weight: 700;
+}
+
+.hero img {
+    transform: translateY(35%);
+    padding-left: 38px;
+    padding-right: 25px;
+    z-index: 2;
+}
+
+.hero svg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    background: var(--ghost-white);
+}
+
+.selling-points {
+    background-color: var(--ghost-white);
+}
+
+.selling-points ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--side-spacing);
+    text-align: center;
+    list-style: none;
+    counter-reset: increment;
+}
+
+.selling-points ol li {
+    display: flex;
+    flex-direction: column;
+    counter-increment: increment;
+}
+
+.selling-points ol li::before {
+    content: counter(increment);
+    font-size: var(--text-lg);
+    border: 1px solid var(--dark-purple);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 48px;
+    width: 48px;
+}
