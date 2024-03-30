@@ -1,0 +1,16 @@
+.founder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.founder img {
+    grid-column: 1;
+    grid-row: 1 / span 5;
+}
+
+.founder > div {
+    grid-column: 1;
+    grid-row: 5 / span 5;
+    order: 2;
+}
