@@ -108,6 +108,7 @@ header a {
     letter-spacing: var(--letter-tight);
     line-height: var(--line-lg);
     font-weight: 700;
+    border: 2px solid var(--eucalyptus)
 }
 
 .hero img {
@@ -180,6 +181,7 @@ header a {
 .selling-points ol li p {
     line-height: var(--line-base);
     color: var(--davy-grey);
+    font-size: var(--text-base);
 }
 
 .selling-points svg {
@@ -198,6 +200,7 @@ header a {
     color: var(--white);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     gap: 16px;
@@ -297,6 +300,9 @@ footer ul {
         text-align: start;
     }
 
+    .founder {
+        margin-bottom: 80px;
+    }
     .founder > div {
         position: relative;
         align-items: flex-start;
@@ -312,5 +318,91 @@ footer ul {
         bottom: -100px;
         right: 16px;
     }
+}
 
+@media (width >= 64em) {
+    :root {
+        --text-3xl: 5rem;
+        --text-2xl: 3.5rem;
+        --text-xl: 2rem;
+        --text-lg: 1.5rem;
+        --text-base: 1.125rem;
+
+        --line-3xl: 85px;
+        --line-2xl: 64px;
+        --line-xl: 40px;
+        --line-base: 32px;
+
+        --letter-tight: -0.18px;
+
+        --side-spacing: 165px;
+    }
+
+    a,
+    footer ul a svg path {
+        transition: ease 0.5s;
+    }
+
+    .hero h1 {
+        padding: 55px 0 37px;
+    }
+
+    .hero img {
+        max-width: 700px;
+    }
+
+    .imageWrapper::before {
+        left: -126px;
+    }
+
+    .imageWrapper::after {
+        right: -56px;
+    }
+
+    .curve {
+        height: 200px;
+    }
+
+    .selling-points ol {
+        flex-direction: row;
+        max-width: unset;
+        margin: 90px var(--side-spacing) 170px;
+        gap: 26px;
+    }
+
+    .selling-points ol li {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .selling-points ol li > div {
+        align-items: center;
+        text-align: center;
+    }
+
+    .founder > div {
+        padding: 64px;
+        gap: 32px;
+    }
+
+    .founder > div::after {
+        bottom: -80px;
+        right: 72px;
+    }
+}
+
+@media (hover: hover) {
+    header a:hover {
+        color: var(--eucalyptus);
+    }
+
+    .hero a:hover,
+    .founder a:hover {
+        color: var(--eucalyptus);
+        background: var(--dark-purple);
+    }
+
+    footer ul a:hover svg path {
+        fill: var(--dark-purple);
+    }
 }
